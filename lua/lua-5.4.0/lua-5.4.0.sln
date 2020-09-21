@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua-5.4.0", "lua-5.4.0\lua-5.4.0.vcxproj", "{A46BDD91-D644-4CFB-AED8-AB4063C6C4DD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua-test", "lua-test\lua-test.vcxproj", "{8B18B096-5D0D-47F7-8BEE-D05E50ABA8C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A46BDD91-D644-4CFB-AED8-AB4063C6C4DD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A46BDD91-D644-4CFB-AED8-AB4063C6C4DD}.Debug|Win32.Build.0 = Debug|Win32
+		{A46BDD91-D644-4CFB-AED8-AB4063C6C4DD}.Release|Win32.ActiveCfg = Release|Win32
+		{A46BDD91-D644-4CFB-AED8-AB4063C6C4DD}.Release|Win32.Build.0 = Release|Win32
+		{8B18B096-5D0D-47F7-8BEE-D05E50ABA8C9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8B18B096-5D0D-47F7-8BEE-D05E50ABA8C9}.Debug|Win32.Build.0 = Debug|Win32
+		{8B18B096-5D0D-47F7-8BEE-D05E50ABA8C9}.Release|Win32.ActiveCfg = Release|Win32
+		{8B18B096-5D0D-47F7-8BEE-D05E50ABA8C9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
