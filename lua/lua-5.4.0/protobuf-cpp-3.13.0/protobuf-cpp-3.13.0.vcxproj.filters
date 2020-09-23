@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\google">
+      <UniqueIdentifier>{87d5d3f2-1eec-48ed-a898-ba5d7680da3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\google\protobuf">
+      <UniqueIdentifier>{8a613bb5-796a-4345-bb50-0626d7a91359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\google\protobuf\util">
+      <UniqueIdentifier>{ed0aa4a8-a1a9-47f9-bb6e-e58b2abb6f76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\google\protobuf\io">
+      <UniqueIdentifier>{8f761405-d29c-41b6-b8fc-2f55e6c60b0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\google\protobuf\stubs">
+      <UniqueIdentifier>{02021c41-eeb4-4071-a9a3-67cc6f073475}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\google\protobuf\util\internal">
+      <UniqueIdentifier>{3827f4ce-3b14-4512-9024-8c8ebf1b65fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\google">
+      <UniqueIdentifier>{d9bb16dc-412d-41ef-9bba-3136a8d7dd5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\google\protobuf">
+      <UniqueIdentifier>{4b556ae7-9d69-4c68-9024-a7dbc18dfeff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\google\protobuf\util">
+      <UniqueIdentifier>{5655e733-7b11-4ca0-83d4-75fd9b7f7f37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\google\protobuf\stubs">
+      <UniqueIdentifier>{aa108484-eaeb-449d-9f09-f5afb0023767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\google\protobuf\io">
+      <UniqueIdentifier>{4917886e-afee-4d6e-9920-266df5e5c85d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\google\protobuf\util\internal">
+      <UniqueIdentifier>{54d52e91-224f-4e4c-8877-b2dfdbb61703}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\google\protobuf\any.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\any.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\api.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\arena.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\arena_impl.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\arenastring.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\descriptor.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\descriptor.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\descriptor_database.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\duration.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\dynamic_message.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\empty.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\extension_set.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\extension_set_inl.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\field_mask.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\generated_enum_reflection.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\generated_enum_util.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\generated_message_reflection.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\generated_message_table_driven.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\generated_message_table_driven_lite.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\generated_message_util.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\has_bits.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\implicit_weak_message.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\inlined_string_field.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\map.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\map_entry.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\map_entry_lite.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\map_field.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\map_field_inl.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\map_field_lite.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\map_type_handler.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\message.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\message_lite.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\metadata.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\metadata_lite.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\package_info.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\parse_context.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\port.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\reflection.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\reflection_internal.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\reflection_ops.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\repeated_field.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\service.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\source_context.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\struct.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\text_format.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\timestamp.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\type.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\unknown_field_set.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\wire_format.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\wire_format_lite.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\wrappers.pb.h">
+      <Filter>头文件\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\coded_stream.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\gzip_stream.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\io_win32.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\package_info.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\printer.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\strtod.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\tokenizer.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\zero_copy_stream.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\zero_copy_stream_impl.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\io\zero_copy_stream_impl_lite.h">
+      <Filter>头文件\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\bytestream.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\callback.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\casts.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\common.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\fastmem.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\hash.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\int128.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\logging.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\macros.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\map_util.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\mathutil.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\mutex.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\once.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\platform_macros.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\port.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\status.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\status_macros.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\statusor.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\stl_util.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\stringpiece.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\stringprintf.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\strutil.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\substitute.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\template_util.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\stubs\time.h">
+      <Filter>头文件\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\delimited_message_util.h">
+      <Filter>头文件\google\protobuf\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\field_comparator.h">
+      <Filter>头文件\google\protobuf\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\field_mask_util.h">
+      <Filter>头文件\google\protobuf\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\json_util.h">
+      <Filter>头文件\google\protobuf\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\message_differencer.h">
+      <Filter>头文件\google\protobuf\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\package_info.h">
+      <Filter>头文件\google\protobuf\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\time_util.h">
+      <Filter>头文件\google\protobuf\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\type_resolver.h">
+      <Filter>头文件\google\protobuf\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\type_resolver_util.h">
+      <Filter>头文件\google\protobuf\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\constants.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\datapiece.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\default_value_objectwriter.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\error_listener.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\expecting_objectwriter.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\field_mask_utility.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\json_escaping.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\json_objectwriter.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\json_stream_parser.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\location_tracker.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\mock_error_listener.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\object_location_tracker.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\object_source.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\object_writer.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\proto_writer.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\protostream_objectsource.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\protostream_objectwriter.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\structured_objectwriter.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\type_info.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\type_info_test_helper.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\google\protobuf\util\internal\utility.h">
+      <Filter>头文件\google\protobuf\util\internal</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\google\protobuf\any.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\any.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\any_lite.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\api.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\arena.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\descriptor.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\descriptor.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\descriptor_database.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\duration.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\dynamic_message.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\empty.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\extension_set.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\extension_set_heavy.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\field_mask.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\generated_enum_util.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\generated_message_reflection.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\generated_message_table_driven.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\generated_message_table_driven_lite.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\generated_message_util.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\implicit_weak_message.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\map_field.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\message.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\message_lite.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\parse_context.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\reflection_ops.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\repeated_field.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\service.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\source_context.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\struct.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\text_format.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\timestamp.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\type.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\unknown_field_set.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\wire_format.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\wire_format_lite.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\wrappers.pb.cc">
+      <Filter>源文件\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\delimited_message_util.cc">
+      <Filter>源文件\google\protobuf\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\field_comparator.cc">
+      <Filter>源文件\google\protobuf\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\field_mask_util.cc">
+      <Filter>源文件\google\protobuf\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\json_util.cc">
+      <Filter>源文件\google\protobuf\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\message_differencer.cc">
+      <Filter>源文件\google\protobuf\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\time_util.cc">
+      <Filter>源文件\google\protobuf\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\type_resolver_util.cc">
+      <Filter>源文件\google\protobuf\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\bytestream.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\common.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\int128.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\status.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\statusor.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\stringpiece.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\stringprintf.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\structurally_valid.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\strutil.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\substitute.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\stubs\time.cc">
+      <Filter>源文件\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\io\coded_stream.cc">
+      <Filter>源文件\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\io\gzip_stream.cc">
+      <Filter>源文件\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\io\io_win32.cc">
+      <Filter>源文件\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\io\printer.cc">
+      <Filter>源文件\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\io\strtod.cc">
+      <Filter>源文件\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\io\tokenizer.cc">
+      <Filter>源文件\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\io\zero_copy_stream.cc">
+      <Filter>源文件\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\io\zero_copy_stream_impl.cc">
+      <Filter>源文件\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\io\zero_copy_stream_impl_lite.cc">
+      <Filter>源文件\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\datapiece.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\default_value_objectwriter.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\error_listener.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\field_mask_utility.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\json_escaping.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\json_objectwriter.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\json_stream_parser.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\object_writer.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\proto_writer.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\protostream_objectsource.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\protostream_objectwriter.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\type_info.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\google\protobuf\util\internal\utility.cc">
+      <Filter>源文件\google\protobuf\util\internal</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
