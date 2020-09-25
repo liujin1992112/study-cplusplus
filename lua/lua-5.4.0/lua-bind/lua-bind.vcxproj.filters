@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="lua_extensions">
+      <UniqueIdentifier>{d0c5c16b-0016-43f9-8019-7eeb8fa5bba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lua_extensions\cjson">
+      <UniqueIdentifier>{07df3f02-0401-4d9c-ae59-48c8dc49e516}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lua_extensions\cjson\fpconv.c">
+      <Filter>lua_extensions\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_extensions\cjson\lua_cjson.c">
+      <Filter>lua_extensions\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_extensions\cjson\strbuf.c">
+      <Filter>lua_extensions\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="AppDelegate.c" />
+    <ClCompile Include="lua_extensions\lua_extensions_more.c">
+      <Filter>lua_extensions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lua_extensions\cjson\fpconv.h">
+      <Filter>lua_extensions\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_extensions\cjson\lua_cjson.h">
+      <Filter>lua_extensions\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_extensions\cjson\strbuf.h">
+      <Filter>lua_extensions\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_extensions\lua_extensions_more.h">
+      <Filter>lua_extensions</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="main.lua" />
+  </ItemGroup>
+</Project>
