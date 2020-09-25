@@ -1,3 +1,5 @@
+--加载lua的全局函数
+require("global")
 json = require("cjson").new()
 print("闭眼就天黑")
 print(json)
@@ -27,5 +29,5 @@ local lua_object = {
 }
 
 local jsonStr = json.encode(lua_object)
-print(jsonStr)
-print(json.decode(jsonStr))
+dump(jsonStr)
+dump(json.decode(jsonStr))

@@ -163,6 +163,7 @@
     <ClInclude Include="lua_extensions\lua_extensions_more.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="global.lua" />
     <None Include="main.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
