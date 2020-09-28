@@ -6,42 +6,34 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="include">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <UniqueIdentifier>{11f04681-7952-4f4d-b414-e0787eb7352d}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <UniqueIdentifier>{bc3777df-2fc6-4282-b365-592e76a41767}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\lib\tolua_event.h">
+      <Filter>src</Filter>
+    </ClInclude>
     <ClInclude Include="include\tolua++.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="src\tolua_event.h">
-      <Filter>src</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\tolua_event.c">
+    <ClCompile Include="src\lib\tolua_event.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\tolua_is.c">
+    <ClCompile Include="src\lib\tolua_is.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\tolua_map.c">
+    <ClCompile Include="src\lib\tolua_map.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\tolua_push.c">
+    <ClCompile Include="src\lib\tolua_push.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\tolua_to.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\toluabind.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\tolua.c">
+    <ClCompile Include="src\lib\tolua_to.c">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

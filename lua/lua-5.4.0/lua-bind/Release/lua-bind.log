@@ -1,0 +1,51 @@
+﻿  AppDelegate.c
+AppDelegate.c(7): warning C4013: “luaL_openlibs”未定义；假设外部返回 int
+AppDelegate.c(18): warning C4013: “system”未定义；假设外部返回 int
+  fpconv.c
+  lua_cjson.c
+lua_extensions\cjson\lua_cjson.c(59): warning C4005: “isnan”: 宏重定义
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(264): note: 参见“isnan”的前一个定义
+lua_extensions\cjson\lua_cjson.c(60): warning C4005: “isinf”: 宏重定义
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(263): note: 参见“isinf”的前一个定义
+lua_extensions\cjson\lua_cjson.c(492): warning C4018: “<”: 有符号/无符号不匹配
+lua_extensions\cjson\lua_cjson.c(524): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  strbuf.c
+  lua_extensions_more.c
+  正在生成代码
+  15 of 1103 functions ( 1.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    12 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+lua-5.4.0.lib(lapi.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lapi.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lauxlib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lauxlib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lstate.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lstate.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(linit.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(linit.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lvm.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lvm.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(ltable.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(ltable.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lobject.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lobject.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(ldo.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(ldo.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lgc.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lgc.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(ldebug.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(ldebug.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lfunc.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lfunc.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lzio.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lzio.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lstring.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lstring.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(ldump.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(ldump.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(ltm.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(ltm.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lmem.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lmem.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(llex.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(llex.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(ltablib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(ltablib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lbaselib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lbaselib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lutf8lib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lutf8lib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(loadlib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(loadlib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(loslib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(loslib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lstrlib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lstrlib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lmathlib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lmathlib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(liolib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(liolib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(ldblib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(ldblib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lcorolib.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lcorolib.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lctype.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lctype.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lundump.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lundump.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lparser.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lparser.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lopcodes.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lopcodes.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+lua-5.4.0.lib(lcode.obj) : warning LNK4099: 未找到 PDB“lua-5.4.0.pdb”(使用“lua-5.4.0.lib(lcode.obj)”或在“F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-5.4.0.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  lua-bind.vcxproj -> F:\Work\study-cplusplus\lua\lua-5.4.0\Release\lua-bind.exe
