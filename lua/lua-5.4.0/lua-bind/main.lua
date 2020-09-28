@@ -31,3 +31,6 @@ local lua_object = {
 local jsonStr = json.encode(lua_object)
 dump(jsonStr)
 dump(json.decode(jsonStr))
+--dump(_G)
+--dump(package)
+--dump(package.preload)
