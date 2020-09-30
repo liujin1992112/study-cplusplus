@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua-5.4.0", "lua-5.4.0\lua-5.4.0.vcxproj", "{A46BDD91-D644-4CFB-AED8-AB4063C6C4DD}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tolua++", "tolua++\tolua++.vcxproj", "{10A09BB3-7A53-44BB-948F-D9E9F6D95591}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "toluapp", "toluapp\toluapp.vcxproj", "{5FC14FA6-DE44-4691-ACC8-E1133318F767}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xxtea-luac", "xxtea-luac\xxtea-luac.vcxproj", "{42F2488E-270F-432C-98DA-48EF49EB0E33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,12 @@ Global
 		{5FC14FA6-DE44-4691-ACC8-E1133318F767}.Release|Win32.Build.0 = Release|Win32
 		{5FC14FA6-DE44-4691-ACC8-E1133318F767}.Release|x64.ActiveCfg = Release|x64
 		{5FC14FA6-DE44-4691-ACC8-E1133318F767}.Release|x64.Build.0 = Release|x64
+		{42F2488E-270F-432C-98DA-48EF49EB0E33}.Debug|Win32.ActiveCfg = Debug|Win32
+		{42F2488E-270F-432C-98DA-48EF49EB0E33}.Debug|Win32.Build.0 = Debug|Win32
+		{42F2488E-270F-432C-98DA-48EF49EB0E33}.Debug|x64.ActiveCfg = Debug|Win32
+		{42F2488E-270F-432C-98DA-48EF49EB0E33}.Release|Win32.ActiveCfg = Release|Win32
+		{42F2488E-270F-432C-98DA-48EF49EB0E33}.Release|Win32.Build.0 = Release|Win32
+		{42F2488E-270F-432C-98DA-48EF49EB0E33}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

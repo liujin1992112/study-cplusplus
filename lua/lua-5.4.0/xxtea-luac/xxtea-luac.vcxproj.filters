@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{13eb8e0d-cb99-4c4c-86d7-53fb7d78e097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xxtea">
+      <UniqueIdentifier>{9a28ec68-b632-4d5e-9ff7-0e8b6bc11b26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\filesystem">
+      <UniqueIdentifier>{87559c8e-27cf-47fe-838a-9a16ab42d687}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\xxtea\xxtea.cpp">
+      <Filter>src\xxtea</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\xxtea\xxtea.h">
+      <Filter>src\xxtea</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filesystem\fwd.h">
+      <Filter>src\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filesystem\path.h">
+      <Filter>src\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filesystem\resolver.h">
+      <Filter>src\filesystem</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
