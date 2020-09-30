@@ -3,9 +3,19 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
 #include "xxtea.h"
 #include "path.h"
 #include "resolver.h"
+
+#ifdef _WIN32
+#include <io.h>
+#else
+#include <unistd.h>
+#include <stdio.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#endif
 
 using namespace std;
 using namespace filesystem;
@@ -54,6 +64,70 @@ typedef struct CompileArgs {
 	}
 } CompileArgs;
 
+void dfsFolder(string folderPath, std::vector<std::string>&files, int depth = 0)
+{
+#ifdef WIN32
+	_finddata_t FileInfo;
+	string strfind = folderPath + "\\*";
+	long Handle = _findfirst(strfind.c_str(), &FileInfo);
+
+
+	if (Handle == -1L)
+	{
+		cerr << "can not match the folder path" << endl;
+		exit(-1);
+	}
+	do {
+		//判断是否有子目录
+		if (FileInfo.attrib & _A_SUBDIR)
+		{
+			//这个语句很重要
+			if ((strcmp(FileInfo.name, ".") != 0) && (strcmp(FileInfo.name, "..") != 0))
+			{
+				string newPath = folderPath + "\\" + FileInfo.name;
+				dfsFolder(newPath, files);
+			}
+		}
+		else
+		{
+			string filename = (folderPath + "\\" + FileInfo.name);
+			files.push_back(filename);
+			//cout << folderPath << "\\" << FileInfo.name << " " << endl;
+		}
+	} while (_findnext(Handle, &FileInfo) == 0);
+
+
+	_findclose(Handle);
+#else
+	DIR *dp;
+	struct dirent *entry;
+	struct stat statbuf;
+	if ((dp = opendir(folderPath.c_str())) == NULL) {
+		fprintf(stderr, "cannot open directory: %s\n", folderPath.c_str());
+		return;
+	}
+	chdir(folderPath.c_str());
+	while ((entry = readdir(dp)) != NULL) {
+		lstat(entry->d_name, &statbuf);
+		if (S_ISDIR(statbuf.st_mode)) {
+
+
+			if (strcmp(".", entry->d_name) == 0 ||
+				strcmp("..", entry->d_name) == 0)
+				continue;
+			printf("%*s%s/\n", depth, "", entry->d_name);
+			dfsFolder(entry->d_name, files, depth + 4);
+		}
+		else {
+			string filename = entry->d_name;
+			printf("%*s%s\n", depth, "", entry->d_name);
+		}
+	}
+	chdir("..");
+	closedir(dp);
+#endif
+}
+
 void walkPath(filesystem::path rootPath)
 {
 	if (rootPath.is_directory())
@@ -71,6 +145,9 @@ void walkPath(filesystem::path rootPath)
 		cout << str;
 	}
 }
+
+static const std::string BYTECODE_FILE_EXT = ".luac";
+static const std::string NOT_BYTECODE_FILE_EXT = ".lua";
 
 int main(int argc, char* argv[])
 {
@@ -91,6 +168,7 @@ int main(int argc, char* argv[])
 	if (!srcPath.exists()) 
 	{	//源目录不存在
 		cout << "source path is not exists!" << endl;
+		system("pause");
 		return 0;
 	}
 
@@ -103,7 +181,36 @@ int main(int argc, char* argv[])
 	std::cout << "source absolute path:" << srcPath.make_absolute() << endl;
 	std::cout << "target absolute path:" << dstPath.make_absolute() << endl;
 
-	walkPath(srcPath);
+	std::string srcAbsolutePath = srcPath.make_absolute().str();
+	std::string targetAbsolutePath = dstPath.make_absolute().str();
+
+	std::vector<std::string> files;
+	dfsFolder(srcPath.str(), files);
+
+
+	for (size_t i = 0; i < files.size(); i++)
+	{
+		std::string file = filesystem::path(files[i]).make_absolute().str();
+		cout << file << endl;
+		std::fstream fs;
+		std::stringstream buffer;
+		fs.open(file, std::fstream::in | std::fstream::out | std::fstream::app);
+
+		buffer << fs.rdbuf();
+		std::string contents(args.strSign + buffer.str());//将签名写入到luac文件头部
+		//cout << contents << endl;
+
+		xxtea_long len = 0;
+		unsigned char* pData = xxtea_encrypt((unsigned char *)contents.c_str(), (xxtea_long)strlen(contents.c_str()), (unsigned char *)args.strKey.c_str(), strlen(args.strKey.c_str()), &len);
+		
+		filesystem::path writePath = filesystem::path(targetAbsolutePath + file.erase(0, srcAbsolutePath.size()) + "c");
+		cout << writePath.make_absolute() << endl;
+
+		std::fstream ws;
+		ws.open(writePath.str(), std::fstream::in | std::fstream::out | std::fstream::app);
+		ws << pData;
+		free(pData);
+	}
 	system("pause");
 	return 0;
 }
