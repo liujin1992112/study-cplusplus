@@ -25,6 +25,7 @@ typedef struct CompileArgs {
 	std::string strDstPath;
 	std::string strKey;
 	std::string strSign;
+	bool en = true;
 
 	void print()
 	{
@@ -48,6 +49,19 @@ typedef struct CompileArgs {
 				if (strcmp(&argv[i][1], "d") == 0)
 				{
 					this->strDstPath = argv[i + 1];
+				}
+
+				if (strcmp(&argv[i][1], "e") == 0)
+				{
+					if (strcmp(argv[i + 1], "") == 0)
+					{
+						//-e后面填空,则默认为加密
+						this->en = true;
+					}
+					else
+					{
+						istringstream(argv[i + 1]) >> boolalpha >> this->en;
+					}
 				}
 
 				if (strcmp(&argv[i][1], "key") == 0)
@@ -167,9 +181,13 @@ int main(int argc, char* argv[])
 
 	if (!srcPath.exists()) 
 	{	//源目录不存在
-		cout << "source path is not exists!" << endl;
-		system("pause");
-		return 0;
+		srcPath = path(programDir + "\\" + args.strSrcPath.c_str());
+		if (!srcPath.exists())
+		{
+			cout << "source path is not exists!" << endl;
+			system("pause");
+			return 0;
+		}
 	}
 
 	if (!dstPath.exists())
@@ -187,29 +205,73 @@ int main(int argc, char* argv[])
 	std::vector<std::string> files;
 	dfsFolder(srcPath.str(), files);
 
-
+	size_t signLen = strlen(args.strSign.c_str());
+	size_t keyLen = strlen(args.strKey.c_str());
 	for (size_t i = 0; i < files.size(); i++)
 	{
 		std::string file = filesystem::path(files[i]).make_absolute().str();
-		cout << file << endl;
-		std::fstream fs;
-		std::stringstream buffer;
-		fs.open(file, std::fstream::in | std::fstream::out | std::fstream::app);
+		std::cout << file << endl;
 
-		buffer << fs.rdbuf();
-		std::string contents(args.strSign + buffer.str());//将签名写入到luac文件头部
-		//cout << contents << endl;
+		//读取文件
+		std::fstream input;
+		input.open(file, std::fstream::in | std::fstream::binary);
+		input.seekg(0, input.end);//将文件指针移动到文件的尾部
+		int length = input.tellg();//获取文件的长度
+		input.seekg(0, input.beg);//将文件指针移动到文件的头部
+		unsigned char* buffer = new unsigned char[length + 1];
+		input.read((char*)buffer, length);
+		input.close();
 
-		xxtea_long len = 0;
-		unsigned char* pData = xxtea_encrypt((unsigned char *)contents.c_str(), (xxtea_long)strlen(contents.c_str()), (unsigned char *)args.strKey.c_str(), strlen(args.strKey.c_str()), &len);
+		xxtea_long retLen = 0;
+		unsigned char* ret = nullptr;
+		if (args.en)
+		{
+			//加密
+			ret = xxtea_encrypt(buffer, length, (unsigned char *)args.strKey.c_str(), keyLen, &retLen);
+		}
+		else
+		{
+			//解密，跳过文件头部的签名
+			ret = xxtea_decrypt(buffer + signLen, length - signLen, (unsigned char *)args.strKey.c_str(), keyLen, &retLen);
+		}
 		
-		filesystem::path writePath = filesystem::path(targetAbsolutePath + file.erase(0, srcAbsolutePath.size()) + "c");
-		cout << writePath.make_absolute() << endl;
+		//写入文件
+		std::string strTmp = targetAbsolutePath + file.erase(0, srcAbsolutePath.size());
+		if (args.en) 
+		{	
+			//加密
+			size_t pos = strTmp.rfind(NOT_BYTECODE_FILE_EXT);
+			if (pos != std::string::npos)
+			{
+				strTmp = strTmp.substr(0, pos) + BYTECODE_FILE_EXT;
+			}
+		}
+		else
+		{
+			//解密
+			size_t pos = strTmp.rfind(BYTECODE_FILE_EXT);
+			if (pos != std::string::npos)
+			{
+				strTmp = strTmp.substr(0, pos) + NOT_BYTECODE_FILE_EXT;
+			}
+		}
+		filesystem::path writePath = filesystem::path(strTmp);
+		std::cout << writePath.make_absolute() << endl;
+		if (!writePath.parent_path().exists())
+		{	//判断写入的文件的目录不存在,则创建对应的文件路径
+			create_directories(writePath.parent_path().make_absolute());
+		}
 
-		std::fstream ws;
-		ws.open(writePath.str(), std::fstream::in | std::fstream::out | std::fstream::app);
-		ws << pData;
-		free(pData);
+		std::fstream output;
+		output.open(writePath.str(), std::fstream::out | std::fstream::binary);
+		if (args.en)
+		{
+			output.write(args.strSign.c_str(), signLen);
+		}
+		output.write((char *)ret, retLen);
+		output.close();
+		delete[] buffer;
+		free(ret);
 	}
 	system("pause");
 	return 0;
