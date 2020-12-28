@@ -21,10 +21,10 @@
     <ClCompile Include="lua_extensions\cjson\strbuf.c">
       <Filter>lua_extensions\cjson</Filter>
     </ClCompile>
-    <ClCompile Include="AppDelegate.c" />
     <ClCompile Include="lua_extensions\lua_extensions_more.c">
       <Filter>lua_extensions</Filter>
     </ClCompile>
+    <ClCompile Include="AppDelegate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lua_extensions\cjson\fpconv.h">
