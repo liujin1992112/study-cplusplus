@@ -90,6 +90,7 @@ int main()
 	{
 		const char *err = lua_tostring(L, -1); //加载失败，会把错误信息压入栈顶
 		printf("loadfile error = %s\n", err);
+		lua_pop(L, 1);
 	}
 
 	std::vector<int> v = { 10, 20, 30, 40, 50, 60 };
