@@ -94,6 +94,7 @@ void operateLuaTable(lua_State* L)
 	iterAndPrintTable(L, -2);
 }
 
+//c++调用lua中的全局add函数
 void cplusplusCallLuaFunc(lua_State* L)
 {	
 	//载入test.lua脚本
@@ -115,11 +116,45 @@ void cplusplusCallLuaFunc(lua_State* L)
 		//参数:lua_State*,参数个数,返回值个数,不设置错误处理回调
 		nRet = lua_pcall(L, nargs, 1, 0);
 
+		//lua_tointeger采用负向索引的方式,从栈顶到栈底方式访问
 		printf("add result:%d\n", lua_tointeger(L, -1));
 
 		//弹出返回值
 		lua_pop(L, 1);
 	}
+}
+
+/**
+ * 任何在Lua中注册的函数必须有同样的原型,这个原型就是lua.h中lua_CFunction,定义如下
+ * typedef int (*lua_CFunction)(lua_State* L)
+ * 返回值:表示参数个数
+ */
+int sub_for_lua(lua_State*L)
+{
+	//lua_tointeger采用正向索引的方式,从栈底到栈顶访问
+	double a = lua_tointeger(L, 1);
+	double b = lua_tointeger(L, 2);
+	lua_pushnumber(L, a - b);//将计算结果压缩栈顶
+	return 1;
+}
+
+void luaCallCPlusplus(lua_State*L)
+{
+	//lua_register:
+	//相当于
+	//-->lua_pushcfunction(L, sub_for_lua) //将sub_for_lua压入栈顶
+	//-->lua_setglobal(L, "sub")		   //将sub_for_lua弹出栈顶,并设置给全局变量sub
+
+	//lua_setglobal 从堆栈上弹出一个值，并将其设为全局变量 name 的新值
+	lua_register(L, "sub", sub_for_lua);
+
+	//c++模拟调用lua中全局变量(可以采用lua脚本的方式调用)
+	lua_getglobal(L, "sub");
+	lua_pushinteger(L, 100);
+	lua_pushinteger(L, 10);
+	lua_pcall(L, 2, 1, 0);
+	printf("sub result:%d\n", lua_tointeger(L, -1));
+	lua_pop(L, 1);
 }
 
 int main()
@@ -139,6 +174,7 @@ int main()
 	operateLuaTable(L);
 
 	cplusplusCallLuaFunc(L);
+	luaCallCPlusplus(L);
 	
 	lua_close(L);
 
