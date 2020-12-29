@@ -43,5 +43,6 @@
   <ItemGroup>
     <None Include="main.lua" />
     <None Include="global.lua" />
+    <None Include="test.lua" />
   </ItemGroup>
 </Project>

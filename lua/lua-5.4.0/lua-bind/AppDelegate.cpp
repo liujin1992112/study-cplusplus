@@ -79,6 +79,49 @@ void iterAndPrintTable(lua_State* L, int index)
 }
 
 
+void operateLuaTable(lua_State* L)
+{
+	std::vector<int> v = { 10, 20, 30, 40, 50, 60 };
+	std::map<std::string, std::string> m;
+	m["age"] = "19";
+	m["name"] = "liujin";
+	m["sex"] = "1";
+
+	pushVecIntToTable(L, v);
+	iterAndPrintArray(L, -1);
+
+	pushMapToTable(L, m);
+	iterAndPrintTable(L, -2);
+}
+
+void cplusplusCallLuaFunc(lua_State* L)
+{	
+	//载入test.lua脚本
+	int nRet = luaL_dofile(L, "test1.lua");
+	if (nRet != LUA_OK)
+	{
+		const char *err = lua_tostring(L, -1); //加载失败，会把错误信息压入栈顶
+		printf("loadfile error = %s\n", err);
+		lua_pop(L, 1);
+	}
+	else
+	{
+		//获取全局变量add,并压入栈中,add是test.lua中定义的全局函数
+		int nargs = 2;
+		lua_getglobal(L, "add");
+		//压入参数
+		lua_pushinteger(L, 1);
+		lua_pushinteger(L, 2);
+		//参数:lua_State*,参数个数,返回值个数,不设置错误处理回调
+		nRet = lua_pcall(L, nargs, 1, 0);
+
+		printf("add result:%d\n", lua_tointeger(L, -1));
+
+		//弹出返回值
+		lua_pop(L, 1);
+	}
+}
+
 int main()
 {
 	lua_State* L = luaL_newstate();
@@ -93,19 +136,10 @@ int main()
 		lua_pop(L, 1);
 	}
 
-	std::vector<int> v = { 10, 20, 30, 40, 50, 60 };
-	std::map<std::string, std::string> m;
-	m["age"] = "19";
-	m["name"] = "liujin";
-	m["sex"] = "1";
+	operateLuaTable(L);
 
-	pushVecIntToTable(L, v);
-	iterAndPrintArray(L, -1);
- 
-
-	pushMapToTable(L, m);
-	iterAndPrintTable(L, -2);
-
+	cplusplusCallLuaFunc(L);
+	
 	lua_close(L);
 
 	system("pause");
